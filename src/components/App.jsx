@@ -11,9 +11,8 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const options = ['Good', 'Neutral', 'Bad'];
-  // let total = 0;
-  let total = good + neutral + bad;
   let result = 0;
+  const total = good + neutral + bad;
 
   if (total > 0) {
       result = Math.round(good / total * 100);
@@ -23,11 +22,9 @@ export const App = () => {
       const option = e.target.textContent;
       switch (option) {
         case 'Good':
-          // setGood(good + 1)
           setGood((prev)=> prev + 1)
           break;
         case 'Neutral':
-          // setNeutral(neutral + 1)
           setNeutral((prev)=> prev + 1)
           break;
         case 'Bad':
